@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	size_t	len;
@@ -31,9 +31,9 @@ char	*ft_strdup(char *src)
 	p[i] = '\0';
 	return (p);
 }
-int main()
-{
-    char *str ="hello bitch ";
-    char *h =ft_strdup(str);
-    printf("%s",h);
-}
+// int main()
+// {
+//     char *str ="hello bitch ";
+//     char *h =ft_strdup(str);
+//     printf("%s",h);
+// }
