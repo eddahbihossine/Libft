@@ -9,7 +9,7 @@
 /*   Updated: 2022/10/16 23:13:04 by heddahbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 int ft_trlen(int i)
 {
   
@@ -61,12 +61,12 @@ return p;
   
     
 }
-int main()
-{
-int p =9;
-    char *s =ft_itoa(p);
-    printf("%s",s);
+// int main()
+// {
+// int p =9;
+//     char *s =ft_itoa(p);
+//     printf("%s",s);
   
   
     
-}
+// }

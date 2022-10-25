@@ -10,16 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int index;
+    size_t index;
     index = 0;
-     size_t len = strlen(s);
+     size_t len = ft_strlen(s);
     char *p = malloc(sizeof(char) * len + 1);
      if(!p)
      return NULL;
@@ -35,17 +33,17 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     p[index]= '\0';
     return (p);
 }
-char f(unsigned int i ,char s)
-{
-    char s2 ;
-   s2 =s;
-   return(s2);
+// char f(unsigned int i ,char s)
+// {
+//     char s2 ;
+//    s2 =s;
+//    return(s2);
  
     
-}
-int main()
-{
-    char *p = "hossine";
-    char *s =ft_strmapi(p,f);
- printf("%s",s);
-}
+// }
+// int main()
+// {
+//     char *p = "hossine";
+//     char *s =ft_strmapi(p,f);
+//  printf("%s",s);
+// }

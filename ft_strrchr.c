@@ -1,12 +1,12 @@
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {
   int index;
-  index =strlen(s);
+  index =ft_strlen(s);
   while(*s && s[index]!= c)
     index--;
-    return(&s[index]);
+    return((char*)s);
 }
 int main()
 {

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   tolower.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heddahbi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heddahbi <heddahbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 05:15:33 by heddahbi          #+#    #+#             */
-/*   Updated: 2022/10/21 05:48:02 by heddahbi         ###   ########.fr       */
+/*   Created: 2022/10/21 06:01:43 by heddahbi          #+#    #+#             */
+/*   Updated: 2022/10/21 06:01:44 by heddahbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
-
-void ft_putchar_fd(char c, int fd)
+int ft_tolower(int c)
 {
-	write(fd,&c,1);
+    if(c >= 'A' && c <= 'Z')
+        return(c + 32);
+    return(0);
+    
 }
-int main()
-{
-	ft_putchar_fd('j',1);
-}
+// int main()
+// {
+//     int c ='A';
+   
+//     printf("%s", ft_tolower(c));
+// }

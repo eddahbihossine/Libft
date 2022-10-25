@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "libft.h"
 void ft_putendl_fd(char *s, int fd)
 {
 	while(*s)
@@ -20,9 +20,9 @@ void ft_putendl_fd(char *s, int fd)
 	s++;
 	}
 }
-int main()
-{
-	int *c ="dsfhdjk";
+// int main()
+// {
+// 	int *c ="dsfhdjk";
 
-	ft_putendl_fd(c,1);
-}
+// 	ft_putendl_fd(c,1);
+// }
