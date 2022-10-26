@@ -11,18 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putendl_fd(char *s, int fd)
+void		ft_putendl_fd(char const *s, int fd)
 {
-	while(*s)
-	{
-		write(fd,s,1);
-		write(fd,"\n",1);
-	s++;
-	}
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-// int main()
-// {
-// 	int *c ="dsfhdjk";
 
-// 	ft_putendl_fd(c,1);
-// }
