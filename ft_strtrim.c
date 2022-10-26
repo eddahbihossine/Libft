@@ -1,32 +1,41 @@
 #include "libft.h"
-char		*ft_strtrim(char const *s)
-{
+#include "libft.h"
 
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
-	char			*str;
+static int
+	ft_char_in_set(char c, char const *set)
+{
+	size_t	i;
 
 	i = 0;
-	k = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	if (s[i] == '\0')
-		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
-
-	j = ft_strlen(s) - 1;
-	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
-		j--;
-
-	str = (char *)malloc(sizeof(char) * (j - i + 2));
-	if (str == NULL)
-		return (NULL);
-	
-	while (k < j - i + 1)
+	while (set[i])
 	{
-		str[k] = s[i + k];
-		k++;
+		if (set[i] == c)
+			return (1);
+		i++;
 	}
-	str[k] = '\0';
+	return (0);
+}
+
+char
+	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
+
+	start = 0;
+	while (s1[start] && ft_char_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_char_in_set(s1[end - 1], set))
+		end--;
+	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
 	return (str);
 }
