@@ -1,5 +1,4 @@
 #include "libft.h"
-#include "libft.h"
 
 static int
 	ft_check(char c, char const *set)
