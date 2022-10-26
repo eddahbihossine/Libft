@@ -13,11 +13,14 @@ node *ft_lstnew(void *content)
 
 
 int main() {
-node *head,*x,*u;
+node *head,*x,*u,*s;
 head = ft_lstnew(x);
 head->content =89;
 head->next = ft_lstnew(u);
-printf("%d",head->content);
+head->next->content =87;
+head->next->next=ft_lstnew(s);
+head->next->next->content =88;
+printf("%d",head->next->next->content);
 
  
  return 0;
