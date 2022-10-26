@@ -2,7 +2,7 @@
 #include "libft.h"
 
 static int
-	ft_char_in_set(char c, char const *set)
+	ft_check(char c, char const *set)
 {
 	size_t	i;
 
@@ -25,10 +25,10 @@ char
 	size_t	end;
 
 	start = 0;
-	while (s1[start] && ft_char_in_set(s1[start], set))
+	while (s1[start] && ft_check(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
-	while (end > start && ft_char_in_set(s1[end - 1], set))
+	while (end > start && ft_check(s1[end - 1], set))
 		end--;
 	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
 	if (!str)
