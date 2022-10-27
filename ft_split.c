@@ -28,6 +28,34 @@ int count_words(char *str, char c)
   return(index - counter);
   
 }
+
+char	**ft_split(const char *s, char c)
+{
+	char	**ret;
+	size_t	i;
+	size_t	len;
+
+	if (!s)
+		return (0);
+	i = 0;
+	ret = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!ret)
+		return (0);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			len = 0;
+			while (*s && *s != c && ++len)
+				++s;
+			ret[i++] = ft_substr(s - len, 0, len);
+		}
+		else
+			++s;
+	}
+	ret[i] = 0;
+	return (ret);
+}
 // int main()
 // {
 //   char *str ="hossine**eddahbi";
