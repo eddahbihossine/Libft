@@ -2,12 +2,12 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*javis;
+	t_list	*9alwa;
 
 	if (*lst)
 	{
-		javis = ft_lstlast(*lst);
-		javis->next = new;
+		9alwa = ft_lstlast(*lst);
+		9alwa->next = new;
 	}
 	else
 		*lst = new;
